@@ -2,12 +2,18 @@ package sammancoaching;
 
 import java.math.BigDecimal;
 
+enum Seniority {
+    LEADERSHIPTEAM,
+    MIDLEVEL,
+    JUNIOR;
+}
+
 class Employee {
     private final BigDecimal annualSalary;
     private final int tenure;
-    private final SeniorityLevel seniority;
+    private final Seniority seniority;
 
-    public Employee(BigDecimal annualSalary, int tenure, SeniorityLevel seniority) {
+    public Employee(BigDecimal annualSalary, int tenure, Seniority seniority) {
         this.annualSalary = annualSalary;
         this.tenure = tenure;
         this.seniority = seniority;
@@ -21,7 +27,7 @@ class Employee {
         return tenure;
     }
 
-    public SeniorityLevel getSeniority() {
+    public Seniority getSeniority() {
         return seniority;
     }
 }
